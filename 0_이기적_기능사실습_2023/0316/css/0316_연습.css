@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+ul ol{
+    line-height: 1.8rem;
+    /* margin: 0;
+    padding-inline-start: 1.5rem; */
+}
+
+ul.b{list-style-type: square;
+}
+
+ol{
+    /* list-style-type: decimal; */
+    list-style-type: upper-roman;
+    /* list-style-type: lower-roman; */
+    /* list-style-type: upper-alpha; */
+    /* list-style-type: lower-alpha;  마지막에 쓴 속성이 우선순위 1 */
+}
+
+.unlist-image{
+    list-style-image: url(img/list01.jpg);
+}

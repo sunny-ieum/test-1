@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>그룹화(Grouping) : "()" 사용</h2>
+    <p>.container>(header>nav>ul>li*5>a)+(#content>section)+footer</p>
+
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content">
+            <section></section>
+        </div>
+        <footer></footer>
+    </div>
+
+    <h2> 속성[attribute] 있는 태그 : "[]"사용 </h2>
+    <td title="name" colspan="5"> title=name, colspan=5</td>    
+    
+
+    <h2> 텍스트가 있는 태그 : {} 중괄호 안에 {텍스트}를 입력</h2>
+    <a href="" class="button">Click Me</a>
+
+    <h2> 넘버링(숫자를 순서대로 나열) : "$"사용</h2>
+    <ul class="list">
+        <li class="item1">1</li>
+        <li class="item2">2</li>
+        <li class="item3">3</li>
+        <li class="item4">4</li>
+        <li class="item5">5</li>
+    </ul>
+    
+</body>
+</html>
