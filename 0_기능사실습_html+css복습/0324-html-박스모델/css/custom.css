@@ -1,1 +1,32 @@
 @charset "utf-8";
+
+/* Content */
+body{
+    background-image: url(../img/logo.jpg);
+}
+
+p{
+    width: 400px;
+    height: 100px;
+    background-color: orange;
+}
+
+/* Padding - 위아래, 오른쪽왼쪽 */
+p#pad{
+    padding: 20px 30px;
+}
+
+/* Margin */
+p#margin{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 5px solid black;
+}
+
+/* Border */
+p#border{
+    border-style: dotted;
+    border-color: purple;
+}

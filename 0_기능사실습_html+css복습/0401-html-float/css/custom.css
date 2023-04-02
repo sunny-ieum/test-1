@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 영역을 벗어난 요소의 숨김 : 플로트 막음  */
+
+#wrap{
+    overflow: hidden;
+}
+
+/* float: 로고 왼쪽 배치 */
+#logo{
+    float: left;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border: solid #cccccc 1px;
+}
+
+/* float: 메뉴 왼쪽 배치 */
+nav{
+    float: left;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: solid #cccccc 1px;
+}
+
+/* float: 문단 왼쪽 배치 */
+#float-p{
+    float: left;
+    width: 500px;
+    height: 50px;
+    background-color: #cccccc;
+    color: #ffffff;
+    border: solid #cccccc 1px;
+}
+
+/* clear : 왼쪽 플로트 취소 */
+aside{
+    float: left;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 60%;
+    border: solid #cccccc 1px;
+}
+
+
+
