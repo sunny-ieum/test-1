@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* 마우스로 링크를 클릭했을 때, yellow */
+a:active{
+    color: yellow;
+    text-decoration: none;
+}
+
+/* 아직 방문하지 않은 링크, red+밑줄 */
+a:link{
+    color: red;
+    text-decoration: underline;
+}
+
+/* 마우스를 링크 위에 올렸을 때 */
+a:hover{
+    color: orange;
+    text-decoration: none;
+}
+
+a:visited{
+    color: purple;
+    text-decoration: none;
+}
+
+/* 마우스를 링크 위에 올렸을 때, nav의 하위요소 모두 스타일적용 */
+nav ul li a:hover{
+    color: green;
+    text-decoration: none;
+}
+
+
+/* 마우스를 링크 위에 올렸을 때, nav의 하위요소 모두 스타일적용 */
+#nav2 #submenu2 #sub-submenu a:hover{
+    color: aqua; 
+    text-decoration: none;
+}
