@@ -3,79 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 레이아웃 C-2</title>
+    <title>웹디자인기능사 레이아웃 C-3</title>
     <style>
         * {
             margin: 0;
-            padding: 0;        
+            padding: 0;   /* 중앙정렬이 아니기 때문에 m0+p0 해주면 됨*/
         }
         #wrap {
             width: 1000px;
-            display: flex;   /*정렬시켜줄거니까*/
+            height: 650px;    /* 350 + 200 + 100 px */
+            display: flex;
         }
         #aside {
-            width: 20%;     /*정해져있지 않기 때문에 임의 지정.*/
-            height: 650px;
+            width: 20%;       /* 표시된 값이 없으므로 눈대중 임의값 설정 */
+            /* height: 650px;     /*위 wrap과 동일 */
+            /* background-color: #cfcfcf; */ */
         }
         #aside h1 {
             width: 100%;
             height: 100px;
-            background-color: #d9d9d9;
+            background-color: #d1d1d1;
         }
         #aside nav {
             width: 100%;
             height: 550px;
-            background-color: #d1d1d1;
+            background-color: #bebebe;
         }
         #main {
-            width: 80%;
-        }
+            width: 80%;     /* 위 aside의 20%를 제외한 나머지 값으로 설정*/
+            /* height: 650px;      * 일단 650px 로 지정
+            background-color: #e3e3e3;             */
+        }        
         #slider {
             width: 100%;
             height: 350px;
-            background-color: #c7c7c7;
+            background-color: #acacac;
         }
-        #contents {
+        #contents{
             width: 100%;
+            /* height: 200px;
+            background-color: #d9d9d9; */
             display: flex;
         }
-        #contents .content1 {
+        #contents .content1{
             width: 33.3333%;
             height: 200px;
             background-color: #bcbcbc;
         }
-        #contents .content2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #b1b1b1;
-        }
-        #contents .content3 {
+        #contents .content2{
             width: 33.3333%;
             height: 200px;
             background-color: #a3a3a3;
         }
+        #contents .content3{
+            width: 33.3333%;
+            height: 200px;
+            background-color: #8b8b8b;
+        }
         #footer {
             width: 100%;
-            display: flex;      /* '#footer .footer2' 가 아니라 "footer"에 'display:flex'를 줘야함 */
+            /* height: 100px;
+            background-color: #c7c7c7; */
+            display: flex;
         }
-        #footer .footer1{
-            width: 80%;
-            height: 100px;
-            background-color: #a7a7a7;
-        }                 
-        #footer .footer2{
+        #footer .footer1 {
             width: 20%;
+            height: 100px;
+            background-color: #838383;
         }
-        #footer .footer2 .footer2-1{
-            width: 100%;        /* 위 footer2의 자식이니까 width값 100%가 들어감*/
-            height: 50px;
+        #footer .footer2 {
+            width: 80%;
+            /* height: 100px;
+            background-color: #fff; */
+        }
+        #footer .footer2 .footer2-1 {
+            height: 50px;       /* footer2의 자식이니까 100% */
             background-color: #9d9d9d;
         }
-        #footer .footer2 .footer2-2{
-            width: 100%;        /* 위 footer2의 자식이니까 width값 100%가 들어감*/
+        #footer .footer2 .footer2-2 {
+            width: 100%;
             height: 50px;
             background-color: #929292;
         }
+
     </style>
 </head>
 <body>
@@ -84,11 +94,10 @@
             <h1></h1>
             <nav></nav>
         </aside>
-        <!-- //aisde -->
+        <!-- //aside. header -->
 
         <main id="main">
-            <article id="slider">                
-            </article>
+            <article id="slider"></article>
             <!-- //slider -->
 
             <section id="contents">
@@ -97,7 +106,7 @@
                 <article class="content3"></article>
             </section>
             <!-- //contents -->
-
+            
             <footer id="footer">
                 <div class="footer1"></div>
                 <div class="footer2">
@@ -108,7 +117,7 @@
             <!-- //footer -->
         </main>
         <!-- //main -->
+
     </div>
-    <!-- //wrap -->
 </body>
 </html>
