@@ -20,36 +20,93 @@
             display: flex;
         }
         #header {
-            width: 200px;
-            height: 100%;       /* 위에 vh값을 썻기 떄문에 height값 100%이..
+            width: 200px;  
+            /* 위에 vh값을 썻기 떄문에 height값 100%이..
             인식가능*/
+        }
+        #header .logo{
+            width: 100%;
+            height: 10%;
             background-color: #efefef;
+        }
+        #header .nav{
+            width: 100%;
+            height: 90%;
+            background-color: #e3e3e3;
         }
         #contents {
             width: 400px;
             height: 100%;
-            background-color: #e3e3e3;
         }
+        #contents .banner{
+            width: 100%;
+            height: 15%;
+            background-color: #d9d9d9;
+        }
+        #contents .notice{
+            width: 100%;
+            height: 35%;
+            background-color: #d1d1d1;
+        }
+        #contents .gallery{
+            width: 100%;
+            height: 35%;
+            background-color: #c7c7c7;
+        }
+        #contents .link{
+            width: 100%;
+            height: 15%;
+            background-color: #bcbcbc;}
         #slider {
             width: calc(100% - 600px);
             height: 100%;
-            background-color: #d9d9d9;
+            background-color: #b1b1b1;
         }
         #footer {
             width: 100%;
             height: 120px;
             background-color: #e3e3e3;
         }
+        #footer .footer1{
+            width: 200px;
+            
+        }
+        #footer .footer2{}
+        #footer .footer2 .footer2-1{}
+        #footer .footer2 .footer2-2{}
+        #footer .footer2 .footer2-2{}
     </style>
 </head>
 <body>
     <div id="wrap">
         <main id="main">
-            <header id="header"></header>          <!-- header는 여러번 쓸 수 있음 -->
-            <section id="contents"></section>
+            <header id="header">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </header>          <!-- header는 여러번 쓸 수 있음 -->
+            <!-- //header -->
+
+            <section id="contents">
+                <article class="banner"></article>
+                <article class="notice"></article>
+                <article class="gallery"></article>
+                <article class="link"></article>                
+            </section>
+            <!-- //contents -->
+
             <article id="slider"></article>
+            <!-- //slider -->
         </main>
-        <footer id="footer"></footer>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
+            </div>
+        </footer>
+        <!-- //foter -->
     </div>
+    <!-- //wrap -->
 </body>
 </html>
