@@ -5,6 +5,18 @@
             "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd18_E-2_0715.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd18_E-2_0715.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd19_E-3_0719.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd19_E-3_0719.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd20_E-4_0728.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd20_E-4_0728.html"
         }
     ]
 }
