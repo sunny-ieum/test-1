@@ -2,13 +2,21 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 레이아웃 A-2</title>
+    <title>웹디자인기능사 메뉴 M-1</title>
+    <link href="https://webfontworld.github.io/GothicA1/GothicA1.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
-            padding: 0;  /* 간격없음 설정값임. 레이아웃 뒤 불필요 여백방지 */
+            padding: 0;
+            font-family: 'GothicA1';
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
         }
         #wrap {
             width: 1200px;
@@ -25,29 +33,28 @@
         }
         #header .nav {
             width: 80%;
-            height: 100px;
             background-color: #e3e3e3;
         }
         #slider {
             width: 100%;
             height: 300px;
-            background-color: #ddd;
+            background-color: #d9d9d9;
         }
-        #main {
+        #contents {
             width: 100%;
             display: flex;
         }
-        #main .content1 {
+        #contents .content1 {
             width: 33.3333%;
             height: 200px;
             background-color: #d1d1d1;
         }
-        #main .content2 {
+        #contents .content2 {
             width: 33.3333%;
             height: 200px;
             background-color: #c7c7c7;
         }
-        #main .content3 {
+        #contents .content3 {
             width: 33.3333%;
             height: 200px;
             background-color: #bcbcbc;
@@ -71,12 +78,55 @@
             height: 100px;
             background-color: #9d9d9d;
         }
-    </style>
+        /* nav */
+        /* ">"를 넣어줘서 바로 밑에 있는 자식에게만 선택, 상속되도록 처리한다. */
+        .nav {        }
+        .nav > ul {
+            display: flex;
+            justify-content: right;            
+            margin-top: 30px;
+        }
+        .nav > ul > li {
+            position: relative;
+                }
+        .nav > ul > li > a {
+            display: inline-block;
+            padding: 10px 40px;
+            /* a가 ..lnline 구조라서 top padding 값이 안보이기 때문에 block구조로 변경할 것.=> inline-block*/
+            background-color: #b0b0b0;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #8e8e8e;
+        }
+        .nav > ul > li > ul {
+            /* display: none; */
+            position: absolute;  /* 기준점 기준으로 영역 잡히기 떄문에 absolute 씀 */
+            left: 0;
+            top: 40px;
+            background-color: #c7c7c7;
+            width: 100%;
+            text-align: center;
+        }
+        /* .nav > ul > li > ul > li {            
+        } */
+        .nav > ul > li > ul > li a {
+            display: inline-block;
+            padding: 10px;
+            background-color: #c1c1c1;
+            width: 100%;
+            box-sizing: border-box;   /* 위 padding 10px을 width:100% 안에 포함시킬때에.*/
+        }
+        .nav > ul > li > ul > li a:hover {
+            background-color: #8f8f8f;
+        }
+
+        
+        </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header">
-            <h1 class="logo"></h1>
+        <div id="header">
+            <div class="logo"></div>
             <nav class="nav">
                 <ul>
                     <li><a href="#">메뉴1</a>
@@ -93,42 +143,47 @@
                             <li><a href="#">서브메뉴2-2</a></li>
                             <li><a href="#">서브메뉴2-3</a></li>
                             <li><a href="#">서브메뉴2-4</a></li>
-                        </ul></li>
+                        </ul>
+                    </li>
                     <li><a href="#">메뉴3</a>
                         <ul>
                             <li><a href="#">서브메뉴3-1</a></li>
                             <li><a href="#">서브메뉴3-2</a></li>
                             <li><a href="#">서브메뉴3-3</a></li>
                             <li><a href="#">서브메뉴3-4</a></li>
-                        </ul></li>
+                        </ul>
+                    </li>
                     <li><a href="#">메뉴4</a>
                         <ul>
                             <li><a href="#">서브메뉴4-1</a></li>
                             <li><a href="#">서브메뉴4-2</a></li>
                             <li><a href="#">서브메뉴4-3</a></li>
                             <li><a href="#">서브메뉴4-4</a></li>
-                        </ul></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-        </header>
+        </div>
         <!-- //header -->
-        
-        <article id="slider"></article>
+
+        <div id="slider">
+        </div>
         <!-- //slider -->
 
-        <main id="main">
-            <section class="content1"></section>
-            <section class="content2"></section>
-            <section class="content3"></section>            
-        </main>
-        <!-- //main -->
+        <div id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!-- //contents -->
 
-        <footer id="footer">
+        <div id="footer">
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
-        </footer>
+        </div>
         <!-- //footer -->
-    </div>  
+    </div>
+    <!-- //wrap -->
 </body>
 </html>

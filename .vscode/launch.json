@@ -23,6 +23,18 @@
             "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd21_E-4_0814-복습.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd21_E-4_0814-복습.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd21_M-1_0814.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd21_M-1_0814.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd02_0531.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/0_기능사실습_html+css복습/202305_다시시작_웹디실기/webd02_0531.html"
         }
     ]
 }
