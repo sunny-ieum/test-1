@@ -47,6 +47,12 @@
             "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd22_M-2_0817.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd22_M-2_0817.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd34_P-1_0818.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd34_P-1_0818.html"
         }
     ]
 }
