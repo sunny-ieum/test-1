@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹디자인기능사 S-2</title>
+    <title>웹디자인기능사 S-3</title>
     <style>
         * {
             margin: 0;
@@ -74,25 +74,20 @@
         #slider {
             overflow: hidden;
         }
-        .sliderWrap {
-            display: flex;  /* 세로로 정렬된 이미지를 가로로 정렬시킨다.*/
-        }
-        .sliderWrap .slider {
-            position: relative;
+        .sliderWrap .slider{
+            position: relative;     /* 아래 span의 기준점을 잡기위해 position을 잡아준다.*/
         }
         .sliderWrap .slider img{
-            vertical-align: top;    /* img를 쓸 떄에는 여백이 생기기 떄문에, 여백을 초기화 시켜줘야한다. */
+            vertical-align: top;   /* 슬라이드 이미지 사이에 여백을 초기화(없애줌) */
         }
         .sliderWrap .slider span{
-            position: absolute; 
+            position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(0,0,0,0.3);
             color: #fff;
-            padding: 10px 20px;
-        }
-        
+        }        
     </style>
 </head>
 <body>
@@ -119,7 +114,6 @@
                 </div>
             </div>
         </article>
-        <!-- //slider -->
 
         <main id="contents">
             <section class="content1"></section>
@@ -140,46 +134,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(function(){
-            let currentIndex = 0;   // 현재 이미지
-            $(".sliderWrap").append($(".slider").first().clone(true));  //첫번쨰 이미지를 복사 후, 마지막에 복사
+            let currentIndex = 0;       //현재 이미지 설정
+            $(".sliderWrap").append($(".slider").first().clone(true)); //첫번째 이미지 복사 후, 마지막에 추가
+            
+            setInterval(function(){     //3초에 한번씩 실행     // 0 3 6 9
+                currentIndex++;     //현재 이미지 값을 1씩 증가
+                $(".sliderWrap").animate({marginTop: -currentIndex * 300 + "px"}, 600);     //이미지 애니메이션 처리
 
-            setInterval(function(){     //3초에 한 번씩 실행
-                currentIndex++;     // 현재 이미지를 1씩 증가
-                $(".sliderWrap").animate({marginLeft: -currentIndex * 100 + "%"}, 600);
-
-                if(currentIndex == 3){  // 마지막이미지 (3)일 때,
-                    setTimeout(function(){      //setTimeout은 한번만실행됨.
-                        $(".sliderWrap").animate({marginLeft: 0}, 0);    //애니메이션을 (순간적으로)정지
-                        currentIndex = 0    // 현재이미지 초기화
-                    }, 700);
-                }
-            },3000);
-        });
-    </script>
-
-    <!-- <script>
-        window.onload = function(){
-            let currentIndex = 0;       //현재 이미지
-            const sliderWrap = document.querySelector(".sliderWrap"); //전체 이미지
-            const slider = document.querySelectorAll(".slider");    //각각의 이미지 
-            const sliderClone = sliderWrap.firstElementChild.cloneNode(true);   //첫번째 이미지 저장 
-            sliderWrap.appendChild(sliderClone);    //복사한 이미지를 마지막에 추가
-
-            setInterval(() => { 
-                currentIndex++;     //현재 이미지를 1씩 증가
-                sliderWrap.style.marginLeft = -currentIndex * 100 + "%";    //이미지 이동
-                sliderWrap.style.transition = "all 0.6s";   //이미지 애니메이션 설정
-
-                if(currentIndex == 3){  //마지막 이미지
-                    setTimeout(() => {
-                        sliderWrap.style.transition = "0s"; //애니메이션 정지
-                        sliderWrap.style.marginLeft = "0";  //이미지 위치 초기화
-                        currentIndex = 0;   //현재 이미지 초기화
+                if(currentIndex == 3){          //마지막 이미지
+                    setTimeout(function(){
+                        $(".sliderWrap").animate({marginTop: 0},0);     //애니메이션 초기화
+                        currentIndex: 0;       //현재 이미지 초가화
                     }, 700);
                 }
             }, 3000);
-            }
-    </script> -->
-    
+        });
+    </script>
 </body>
 </html>
