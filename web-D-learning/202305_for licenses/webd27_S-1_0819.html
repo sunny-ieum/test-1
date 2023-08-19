@@ -99,6 +99,10 @@
             padding: 10px 20px;
             color: #fff; 
         }
+        /* 자바스크립트용 css */
+        .sliderWrap > div{
+            display: block;
+        }        
         </style>
 </head>
 <body>
@@ -144,7 +148,7 @@
     <!-- //wrap -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         $(function(){
             let currentIndex = 0;    //보고 있는 이미지를 0 이라고 저장시켜준다.
 
@@ -159,6 +163,25 @@
                 // console.log("nextIndex :" + nextIndex)
             }, 3000);
         });
+    </script> -->
+
+    <script>
+        window.onload = function(){
+            let currentIndex = 0;  //현재 이미지
+            const slider = document.querySelectorAll(".slider");    //모든 이미지를 변수에 저장
+            slider.forEach(img => img.style.opacity="0"); // 모든 이미지를 투명하게
+            slider[0].style.opacity = "1"  // 첫번쨰 이미지만 보이게
+
+            setInterval(() => {     //3초에 한번씩 실행
+                let nextIndex = (currentIndex + 1) % slider.length; // 1 2 0 1 2 0 .. 
+
+                slider[currentIndex].style.opacity = "0";   //첫번째 이미지 나타남
+                slider[nextIndex].style.opacity = "1";      //두번째 이미지 나타남
+                slider.forEach(img => img.style.transition = "all 1s"); //이미지 애니메이션 추가
+
+                currentIndex = nextIndex;
+            });
+        }
     </script>
 
 </body>
