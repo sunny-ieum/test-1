@@ -53,6 +53,18 @@
             "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd34_P-1_0818.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd34_P-1_0818.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd31_S-5.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd31_S-5.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd28_S-2_0819.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd28_S-2_0819.html"
         }
     ]
 }
