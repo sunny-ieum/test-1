@@ -119,6 +119,12 @@
             "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd25_M-5.html",
             "request": "launch",
             "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/webd25_M-5.html"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/Example_site-5type/site-C/0821_C-3/index.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/web-D-learning/202305_for licenses/Example_site-5type/site-C/0821_C-3/index.html"
         }
     ]
 }
